@@ -2,12 +2,7 @@ const express = require('express');
 const cors = require('cors');
 const app = express();
 
-// Update the CORS configuration
-app.use(cors({
-    origin: 'https://rest-api-development-app.vercel.app', // Only Vercel URL, without trailing slash
-    methods: ['POST', 'GET'],
-    credentials: true
-}));
+app.use(cors());
 
 app.use(express.json());
 
